@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .first-line:first-line{
+            color:red;
+        }
+        .first-letter:first-letter{
+            color:red;
+        }
+
+        .before:before{
+           content:'nihao';
+           color:red;
+        }
+
+    </style>
+</head>
+<body>
+
+ <p class="first-line first-letter">:first-line 伪元素选择器，选中第一行的文本，当文本呈现流式的状态时，也只会选中第一行的文本，可以改变浏览器的宽度，<br/>来观察效果, 也可以使用"<br>"标签来使其强制换行</p>
+
+<p class="first-letter">:first-letter伪元素选择器，选中文本段的第一个首字母<br/>试试看转行的第一个首字母是否会被选中，结果显示没有选中</p>
+
+<p class="first-letter">第一个:first-letter伪元素选择器，这段代码表明一个中文字符等于两个英文字母，但是在计算字符串的长度时，不必考虑这个差别，因为字符串的length是按照字符的个数来计算的</p>
+
+<p class="first-letter">123:first-letter伪元素选择器，类型为数字的结论，如上所述</p>
+
+<p class="before">before伪元素，在元素内容的前面插入新的内容，可以实现很多很好的特效，不会出现在文档结构中，不会影响文档结构的生成，只会在文档的外部展示出来，是额外添加的元素，是虚假的元素</p>
+
+<p class="after">after伪元素，同before所诉</p>
+
+</body>
+</html>

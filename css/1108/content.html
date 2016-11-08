@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body {counter-reset:section;}
+        h1 {counter-reset:subsection;}
+        a {
+            position: relative;
+            display: inline-block;
+            outline: none;
+            text-decoration: none;
+            color: #000;
+            font-size: 32px;
+            padding: 5px 10px;
+        }
+
+        a:hover::before, a:hover::after { position: absolute; }
+
+        /*a:hover::before { content: "↗"; left: -20px; }*/
+        a:hover::after { content: "" attr(data-title) ""; right:  -20px; }
+        /*a:hover:after{  content: url('logo.png');  }*/
+
+        div{
+
+            margin-left:900px;
+        }
+
+        /*h2:before { counter-increment: a1; content: "Chapter " counter(a1) ". " }*/
+
+        .h1:before{
+            counter-increment:section 3;
+            content:'Section' counter(section)"."
+
+        }
+        .h2:before{
+            counter-increment:subSection; content:counter(section)"."counter(subSection)"subSection"
+
+        }
+
+
+    </style>
+</head>
+<body>
+<div>
+    <a href="123" data-title="tip">a标签</a>
+    <br/>
+    <a href="">实现前后出现中括号</a>
+</div>
+
+<p>使用伪元素实现计数器</p>
+<h2>1</h2>
+<h2>2</h2>
+<h2>3</h2>
+
+<h1 class="h1"></h1>
+<h2 class="h2"></h2>
+<h2 class="h2"></h2>
+<h2 class="h2"></h2>
+
+<h1 class="h1"></h1>
+<h2 class="h2"></h2>
+<h2 class="h2"></h2>
+<h2 class="h2"></h2>
+
+<p>使用before和after的案例</p>
+
+<p>1.鼠标滑过tip，利用attr方法获得相应的属性值</p>
+<p>2.实现计数器，注意counter-reset的使用</p>
+<p>3.counter的使用语法：counter: 变量名（存放计数值） ，步长 </p>
+<p>4.实现清除浮动</p>
+
+</body>
+</html>
